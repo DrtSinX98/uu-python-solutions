@@ -1,30 +1,18 @@
-# Program to multiply two matrices using nested loops
-import random
+import numpy as np
+import time
 
 N = 250
 
-# NxN matrix
-X = []
-for i in range(N):
-    X.append([random.randint(0,100) for r in range(N)])
+start_time = time.time()
 
-# Nx(N+1) matrix
-Y = []
-for i in range(N):
-    Y.append([random.randint(0,100) for r in range(N+1)])
+# Creating matrices directly as numpy arrays is much faster
+X = np.random.randint(0, 101, size=(N, N))
+Y = np.random.randint(0, 101, size=(N, N+1))
 
-# result is Nx(N+1)
-result = []
-for i in range(N):
-    result.append([0] * (N+1))
+# The @ operator performs highly optimized C-level matrix multiplication
+result = X @ Y
 
-# iterate through rows of X
-for i in range(len(X)):
-    # iterate through columns of Y
-    for j in range(len(Y[0])):
-        # iterate through rows of Y
-        for k in range(len(Y)):
-            result[i][j] += X[i][k] * Y[k][j]
+end_time = time.time()
 
-for r in result:
-    print(r)
+print(result)
+print(f"Execution time: {end_time - start_time:.6f} seconds")
