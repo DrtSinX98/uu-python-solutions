@@ -23,8 +23,8 @@ class GameRunner:
         # Probably counts wins or something.
         # Great variable name, 10/10.
         c = 0
+        runner = cls()
         while True:
-            runner = cls()
 
             print("Round {}\n".format(runner.round))
 
