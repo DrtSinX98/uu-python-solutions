@@ -27,7 +27,7 @@ class GameRunner:
         while True:
             for die in runner.dice:
                 die.roll()
-                
+
             print("Round {}\n".format(runner.round))
 
             for die in runner.dice:
@@ -56,7 +56,7 @@ class GameRunner:
 
             prompt = input("Would you like to play again?[Y/n]: ")
 
-            if prompt == 'y' or prompt == '':
+            if prompt.lower() == 'y' or prompt == '':
                 continue
             else:
-                i_just_throw_an_exception()
+                break
