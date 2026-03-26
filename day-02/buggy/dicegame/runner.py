@@ -25,7 +25,9 @@ class GameRunner:
         c = 0
         runner = cls()
         while True:
-
+            for die in runner.dice:
+                die.roll()
+                
             print("Round {}\n".format(runner.round))
 
             for die in runner.dice:
