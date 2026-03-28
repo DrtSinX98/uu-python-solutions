@@ -30,3 +30,12 @@ This repository contains solutions for the daily course exercises.
   * Solved grid-mismatch issues by mapping the model onto the experimental $x$-coordinates using `scipy.interpolate.interp1d`.
   * Determined the optimal scaling factor by minimizing the Sum of Squared Errors (SSE) using `scipy.optimize.minimize_scalar`.
   * Implemented strict bounds, NaN masking, and array sorting to ensure robust optimizer convergence and prevent mathematical crashes during the fitting routine.
+
+## Day 5: Data Containers
+
+* **Linear Algebra (`scipy.linalg`):** Solved systems of linear equations ($Ax = b$), calculated inverse and determinant matrices, extracted eigenvalues and eigenvectors, and evaluated various matrix norms (Frobenius, L1, L-infinity).
+* **Statistical Distributions & Testing (`scipy.stats`):** * Modeled and plotted discrete (Poisson) and continuous (Normal) random variables, comparing their Probability Mass/Density Functions (PMF/PDF) against Cumulative Distribution Functions (CDF) and randomized histograms.
+  * Performed hypothesis testing using Welch's t-test (`ttest_ind`) to determine if independent datasets originated from the same distribution.
+* **Data Manipulation & Grouping (`pandas`):** * **Inspection & Slicing:** Loaded heterogeneous data, inspected structural metadata, and utilized label-based (`.loc`) and integer-based (`.iloc`) indexing to extract specific rows, columns, and sub-dataframes.
+  * **Filtering:** Applied complex boolean masks to filter data based on multi-condition logic.
+  * **Aggregation:** Utilized the Split-Apply-Combine workflow via `.groupby()` to calculate descriptive statistics (mean, median, min, max) and isolate top aggregates across distinct categories.
