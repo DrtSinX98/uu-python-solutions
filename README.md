@@ -20,3 +20,13 @@ This repository contains solutions for the daily course exercises.
   * **Broadcasting:** Implemented efficient 3D coordinate normalization without explicit loops.
   * **Memory Layouts:** Utilized `np.lib.stride_tricks.as_strided` to manipulate byte strides, creating a memory-efficient 2D sliding window view over an array (the foundation of convolutional operations).
 * **MPI Parallelization (`mpi4py`):** Developed scripts to execute across distributed environments. Demonstrated basic process rank identification (`mpi_ranks.py`) and collective communication using `comm.reduce` to aggregate data across nodes (`mpi_sum.py`).
+
+## Day 4: Best Practices - 2
+
+* **Unit Testing (`pytest`):** Developed a test suite (`test_simple_math.py`) to systematically verify the mathematical operations and polynomial evaluations within the `simple_math` module.
+* **API Documentation (`Sphinx`):** Integrated standard NumPy-style docstrings into the codebase and utilized Sphinx to automatically generate a compiled HTML API reference. Configured system paths and extensions in `conf.py` and `index.rst` to render the module's documentation seamlessly.
+* **Data Visualization (`matplotlib`):** Designed customized visualizations using the object-oriented API. Created a contour plot forming a plasma flower using `meshgrid`, the `plasma` colormap, and cleaned axis spines.
+* **Data Fitting & Optimization (`scipy`):** Aligned a theoretical model with experimental scattering data. 
+  * Solved grid-mismatch issues by mapping the model onto the experimental $x$-coordinates using `scipy.interpolate.interp1d`.
+  * Determined the optimal scaling factor by minimizing the Sum of Squared Errors (SSE) using `scipy.optimize.minimize_scalar`.
+  * Implemented strict bounds, NaN masking, and array sorting to ensure robust optimizer convergence and prevent mathematical crashes during the fitting routine.
